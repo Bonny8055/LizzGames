@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lizz Games</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: #e4e4e4;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #1b1b1b;
+      color: #e4e4e4;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-container img {
+      height: 50px;
+      margin-right: 15px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #e4e4e4;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #d4af37; /* Gold color */
+    }
+
+    /* Section Styles */
+    section {
+      padding: 100px 20px 80px;
+      text-align: center;
+    }
+
+    #intro {
+      background: linear-gradient(45deg, #d40000, #4a0000); /* Red and Dark Gradient */
+      color: #e4e4e4;
+    }
+
+    #intro h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: fadeIn 2s;
+    }
+
+    #projects {
+      background: #1b1b1b;
+      padding: 50px 20px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .project {
+      width: 300px;
+      border: 2px solid #333;
+      border-radius: 10px;
+      background: #292929;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(255, 215, 0, 0.5); /* Gold glow */
+    }
+
+    .project img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project h3 {
+      margin: 15px 0;
+      color: #d4af37; /* Gold */
+    }
+
+    .project a {
+      text-decoration: none;
+      color: white;
+      background: #4a0000;
+      padding: 10px 15px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-bottom: 15px;
+      transition: background 0.3s;
+    }
+
+    .project a:hover {
+      background: #d40000; /* Bright red */
+    }
+
+    #about {
+      background: #121212;
+      color: #e4e4e4;
+    }
+
+    #about h2 {
+      color: #d4af37; /* Gold */
+    }
+
+    #contact {
+      background: #1b1b1b;
+      color: #e4e4e4;
+    }
+
+    #contact a {
+      color: #80ff80; /* Light Green */
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #121212;
+      color: #777;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    /* Keyframe Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="logo.png" alt="Lizz Games Logo">
+      <h1>Lizz Games</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#intro">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#contact">   </a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="intro">
+      <h2>Welcome to Lizz Games</h2>
+      <p>Explore the next level of gaming with our AI NPC technology and groundbreaking projects.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Our Projects</h2>
+      <div class="gallery">
+        <div class="project">
+          <img src="D:\blender output\0002.png" alt="AI NPC">
+          <h3>AI NPC</h3>
+          <a href="#">Explore the Future</a>
+        </div>
+        <div class="project">
+          <img src="D:\blender output\0004.png" alt="Project 2">
+          <h3>Game Project 2</h3>
+          <a href="#">View Project</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <p>Lizz Games is dedicated to delivering unparalleled gaming experiences. Our projects redefine interaction with AI NPCs and immersive VR worlds.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Have a question or want to collaborate? Reach out to us!</p>
+      <p>Email: <a href="mailto:tammalibhanuprakash23@gmail.com">tammalibhanuprakash23@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Lizz Games. All rights reserved.</p>
+  </footer>
+</body>
+</html>

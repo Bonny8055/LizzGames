@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lizz Games - Projects</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* General Theme Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #121212;
+      color: #e4e4e4;
+    }
+
+    header {
+      background: #1b1b1b;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #d4af37;
+    }
+
+    header h1 {
+      color: #d4af37;
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      background: #1b1b1b;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #e4e4e4;
+      font-size: 1.2rem;
+      padding: 5px 15px;
+      border-radius: 5px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    nav ul li a:hover {
+      background: #d40000;
+      color: #ffffff;
+    }
+
+    main {
+      padding: 50px 20px;
+    }
+
+    h2 {
+      color: #d4af37;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+    }
+
+    .slider-container {
+      margin: 0 auto;
+      padding: 20px;
+      max-width: 800px;
+    }
+
+    .slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      gap: 20px;
+    }
+
+    .slider::-webkit-scrollbar {
+      display: none;
+    }
+
+    .slider-item {
+      flex: 0 0 auto;
+      width: 250px;
+      background-color: #1b1b1b;
+      border: 1px solid #d4af37;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      color: #e4e4e4;
+    }
+
+    .slider-item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .slider-item h3 {
+      margin: 10px 0;
+      font-size: 1.2rem;
+      color: #d4af37;
+    }
+
+    .slider-item a {
+      display: block;
+      padding: 10px;
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .slider-item a:hover {
+      background: #d4af37;
+      color: #121212;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Our Projects</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h2>AI NPC</h2>
+    <p>Interact with NPCs in the metaverse using VR headsets!</p>
+
+    <div class="slider-container">
+      <h2>AR/VR Projects</h2>
+      <div class="slider">
+        <div class="slider-item">
+          <img src="path-to-arvr-project1.jpg" alt="AR/VR Project 1">
+          <h3>AR/VR Project 1</h3>
+          <a href="arvr-project1-link.html">View Project</a>
+        </div>
+        <div class="slider-item">
+          <img src="path-to-arvr-project2.jpg" alt="AR/VR Project 2">
+          <h3>AR/VR Project 2</h3>
+          <a href="arvr-project2-link.html">View Project</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="slider-container">
+      <h2>Indie Games</h2>
+      <div class="slider">
+        <div class="slider-item">
+          <img src="path-to-indie-game1.jpg" alt="Indie Game 1">
+          <h3>Indie Game 1</h3>
+          <a href="indie-game1-link.html">View Project</a>
+        </div>
+        <div class="slider-item">
+          <img src="path-to-indie-game2.jpg" alt="Indie Game 2">
+          <h3>Indie Game 2</h3>
+          <a href="indie-game2-link.html">View Project</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="slider-container">
+      <h2>Other Projects</h2>
+      <div class="slider">
+        <div class="slider-item">
+          <img src="path-to-other-project1.jpg" alt="Other Project 1">
+          <h3>Other Project 1</h3>
+          <a href="other-project1-link.html">View Project</a>
+        </div>
+        <div class="slider-item">
+          <img src="path-to-other-project2.jpg" alt="Other Project 2">
+          <h3>Other Project 2</h3>
+          <a href="other-project2-link.html">View Project</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
