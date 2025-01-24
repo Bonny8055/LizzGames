@@ -20,10 +20,10 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: #1b1b1b;
+      background: linear-gradient(90deg, #4a0000, #1b1b1b);
       color: #e4e4e4;
       padding: 10px 20px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
       z-index: 1000;
       display: flex;
       align-items: center;
@@ -55,54 +55,77 @@
       text-decoration: none;
       color: #e4e4e4;
       font-size: 16px;
-      transition: color 0.3s;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: color 0.3s, transform 0.3s;
     }
 
     nav ul li a:hover {
       color: #d4af37; /* Gold color */
+      transform: scale(1.1);
     }
 
-    /* Section Styles */
-    section {
-      padding: 100px 20px 80px;
-      text-align: center;
-    }
-
+    /* Intro Section */
     #intro {
-      background: linear-gradient(45deg, #d40000, #4a0000); /* Red and Dark Gradient */
+      background: url('https://source.unsplash.com/1600x900/?gaming,neon') no-repeat center center/cover;
       color: #e4e4e4;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
     }
 
     #intro h2 {
-      font-size: 3rem;
+      font-size: 4rem;
       margin-bottom: 20px;
       animation: fadeIn 2s;
+      color: #d4af37; /* Gold */
+      text-shadow: 2px 2px 10px #000;
     }
 
+    #intro p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      line-height: 1.8;
+      text-shadow: 1px 1px 5px #000;
+    }
+
+    /* Projects Section */
     #projects {
       background: #1b1b1b;
       padding: 50px 20px;
+      text-align: center;
+    }
+
+    #projects h2 {
+      color: #d4af37;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
     }
 
     .gallery {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 30px;
     }
 
     .project {
-      width: 300px;
+      width: 320px;
       border: 2px solid #333;
       border-radius: 10px;
       background: #292929;
       overflow: hidden;
       transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
     }
 
     .project:hover {
       transform: translateY(-10px);
-      box-shadow: 0 8px 16px rgba(255, 215, 0, 0.5); /* Gold glow */
+      box-shadow: 0 8px 16px rgba(255, 215, 0, 0.5);
     }
 
     .project img {
@@ -113,49 +136,79 @@
 
     .project h3 {
       margin: 15px 0;
-      color: #d4af37; /* Gold */
+      color: #d4af37;
     }
 
     .project a {
       text-decoration: none;
       color: white;
       background: #4a0000;
-      padding: 10px 15px;
+      padding: 10px 20px;
       border-radius: 5px;
+      font-weight: bold;
       display: inline-block;
       margin-bottom: 15px;
-      transition: background 0.3s;
+      transition: background 0.3s, transform 0.3s;
     }
 
     .project a:hover {
-      background: #d40000; /* Bright red */
+      background: #d40000;
+      transform: scale(1.1);
     }
 
+    /* About Section */
     #about {
       background: #121212;
       color: #e4e4e4;
+      padding: 50px 20px;
+      text-align: center;
     }
 
     #about h2 {
-      color: #d4af37; /* Gold */
+      color: #d4af37;
+      margin-bottom: 20px;
     }
 
+    #about p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Contact Section */
     #contact {
       background: #1b1b1b;
       color: #e4e4e4;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    #contact h2 {
+      color: #d4af37;
+      margin-bottom: 20px;
     }
 
     #contact a {
-      color: #80ff80; /* Light Green */
+      color: #80ff80;
       text-decoration: none;
       font-weight: bold;
     }
 
+    #contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
     footer {
       background: #121212;
       color: #777;
       padding: 10px 0;
       text-align: center;
+    }
+
+    footer p {
+      font-size: 0.9rem;
     }
 
     /* Keyframe Animations */
@@ -177,11 +230,10 @@
     </div>
     <nav>
       <ul>
-        <li><a href="#intro">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="#contact">   </a></li>
+        <li><a href="#intro">Home </a></li>
+        <li><a href="#projects">Projects </a></li>
+        <li><a href="#about">About </a></li>
+        <li><a href="#contact">Contact   </a></li>
       </ul>
     </nav>
   </header>
@@ -193,30 +245,25 @@
     </section>
 
     <section id="projects">
-<h2>Our Projects</h2>
-<div class="gallery">
-  <div class="project">
-    <img src="https://github.com/Bonny8055/LizzGames/blob/main/DrealLine.png" alt="Dreamline Project">
-    <h3>Dreamline</h3>
-    <p>A groundbreaking AI NPC project redefining virtual interactions.</p>
-    <a href="#">Explore the Future</a>
-  </div>
-
-  <div class="project">
-    <img src="https://github.com/Bonny8055/LizzGames/blob/main/AutoAnna.png" alt="Auto Anna Project">
-    <h3>Auto Anna</h3>
-    <p>An exciting AR experience bringing immersive gaming to life.</p>
-    <a href="#">Explore the Future</a>
-  </div>
-
-  <div class="project">
-    <img src="https://github.com/Bonny8055/LizzGames/blob/main/Dino_kurradu.png" alt="Dino Kurradu 🦕 Project">
-    <h3>Dino Kurradu</h3>
-    <p>A thrilling 2D game adventure packed with fun and excitement.</p>
-    <a href="#">View Project</a>
-  </div>
-</div>
-
+      <h2>Our Projects</h2>
+      <div class="gallery">
+        <div class="project">
+          <img src="https://github.com/Bonny8055/LizzGames/blob/main/DrealLine.png" alt="Dreamline">
+          <h3>Dreamline</h3>
+          <a href="https://bhanuprakash.itch.io/dreamline">View Project</a>
+        </div>
+        <div class="project">
+          <img src="https://github.com/Bonny8055/LizzGames/blob/main/AutoAnna.png" alt="Auto Anna">
+          <h3>Auto Anna</h3>
+          <a href="https://bhanuprakash.itch.io/autoanna">View Project</a>
+        </div>
+        <div class="project">
+          <img src="https://github.com/Bonny8055/LizzGames/blob/main/Dino_kurradu.png" alt="Dino Kurradu">
+          <h3>Dino Kurradu</h3>
+          <a href="https://bhanuprakash.itch.io/dino">View Project</a>
+        </div>
+      </div>
+    </section>
 
     <section id="about">
       <h2>About Us</h2>
