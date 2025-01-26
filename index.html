@@ -1,285 +1,237 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lizz Games</title>
-  <link rel="icon" type="image/png" href="logo.png">
-  <style>
-    /* General Styles */
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #121212;
-      color: #e4e4e4;
-      scroll-behavior: smooth;
-    }
-
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: linear-gradient(90deg, #4a0000, #1b1b1b);
-      color: #e4e4e4;
-      padding: 10px 20px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo-container {
-      display: flex;
-      align-items: center;
-    }
-
-    .logo-container img {
-      height: 50px;
-      margin-right: 15px;
-    }
-
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-    }
-
-    nav ul li {
-      margin: 0 15px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #e4e4e4;
-      font-size: 16px;
-      font-weight: bold;
-      text-transform: uppercase;
-      transition: color 0.3s, transform 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #d4af37; /* Gold color */
-      transform: scale(1.1);
-    }
-
-    /* Intro Section */
-    #intro {
-      background: url('https://source.unsplash.com/1600x900/?gaming,neon') no-repeat center center/cover;
-      color: #e4e4e4;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-    }
-
-    #intro h2 {
-      font-size: 4rem;
-      margin-bottom: 20px;
-      animation: fadeIn 2s;
-      color: #d4af37; /* Gold */
-      text-shadow: 2px 2px 10px #000;
-    }
-
-    #intro p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      line-height: 1.8;
-      text-shadow: 1px 1px 5px #000;
-    }
-
-    /* Projects Section */
-    #projects {
-      background: #1b1b1b;
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    #projects h2 {
-      color: #d4af37;
-      margin-bottom: 30px;
-      font-size: 2.5rem;
-    }
-
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-    }
-
-    .project {
-      width: 320px;
-      border: 2px solid #333;
-      border-radius: 10px;
-      background: #292929;
-      overflow: hidden;
-      transition: transform 0.3s, box-shadow 0.3s;
-      position: relative;
-    }
-
-    .project:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 16px rgba(255, 215, 0, 0.5);
-    }
-
-    .project img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .project h3 {
-      margin: 15px 0;
-      color: #d4af37;
-    }
-
-    .project a {
-      text-decoration: none;
-      color: white;
-      background: #4a0000;
-      padding: 10px 20px;
-      border-radius: 5px;
-      font-weight: bold;
-      display: inline-block;
-      margin-bottom: 15px;
-      transition: background 0.3s, transform 0.3s;
-    }
-
-    .project a:hover {
-      background: #d40000;
-      transform: scale(1.1);
-    }
-
-    /* About Section */
-    #about {
-      background: #121212;
-      color: #e4e4e4;
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    #about h2 {
-      color: #d4af37;
-      margin-bottom: 20px;
-    }
-
-    #about p {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    /* Contact Section */
-    #contact {
-      background: #1b1b1b;
-      color: #e4e4e4;
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    #contact h2 {
-      color: #d4af37;
-      margin-bottom: 20px;
-    }
-
-    #contact a {
-      color: #80ff80;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    #contact a:hover {
-      text-decoration: underline;
-    }
-
-    /* Footer */
-    footer {
-      background: #121212;
-      color: #777;
-      padding: 10px 0;
-      text-align: center;
-    }
-
-    footer p {
-      font-size: 0.9rem;
-    }
-
-    /* Keyframe Animations */
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lizz Games</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <style>
+      /* General Styles */
+      body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #121212;
+        color: #e4e4e4;
+        scroll-behavior: smooth;
       }
-      to {
-        opacity: 1;
+
+      header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: #1b1b1b;
+        color: #e4e4e4;
+        padding: 10px 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
       }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="logo-container">
-      <img src="images/logo.png" alt="Lizz Games Logo">
-      <h1>Lizz Games</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="intro.html">Home</a></li>
-        <li><a href="projects.html">Projects </a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <section id="intro">
-      <h2>Welcome to Lizz Games</h2>
-      <p>Explore the next level of gaming with our AI NPC technology and groundbreaking projects.</p>
-    </section>
+      .logo-container {
+        display: flex;
+        align-items: center;
+      }
 
-    <section id="projects">
-      <h2>Our Projects</h2>
-      <div class="gallery">
-        <div class="project">
-          <base href="https://raw.githubusercontent.com/Bonny8055/LizzGames/main/">
-          <img src="images/DrealLine.png" alt="Dreamline">
-          <h3>Dreamline</h3>
-          <a href="https://bhanuprakash.itch.io/dreamline">View Project</a>
-        </div>
-        <div class="project">
-          <img src="images/AutoAnna.png" alt="Auto Anna">
-          <h3>Auto Anna</h3>
-          <a href="https://bhanuprakash.itch.io/autoanna">View Project</a>
-        </div>
-        <div class="project">
-          <img src="images/Dino_kurradu.png" alt="Dino Kurradu">
-          <h3>Dino Kurradu</h3>
-          <a href="https://bhanuprakash.itch.io/dino">View Project</a>
-        </div>
+      .logo-container img {
+        height: 50px;
+        margin-right: 15px;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+      }
+
+      nav ul li {
+        margin: 0 15px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #e4e4e4;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+
+      nav ul li a:hover {
+        color: #d4af37; /* Gold color */
+      }
+
+      /* Section Styles */
+      section {
+        padding: 100px 20px 80px;
+        text-align: center;
+      }
+
+      #intro {
+        background: linear-gradient(45deg, #d40000, #4a0000); /* Red and Dark Gradient */
+        color: #e4e4e4;
+      }
+
+      #intro h2 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        animation: fadeIn 2s;
+      }
+
+      #projects {
+        background: #1b1b1b;
+        padding: 50px 20px;
+      }
+
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .project {
+        width: 300px;
+        border: 2px solid #333;
+        border-radius: 10px;
+        background: #292929;
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .project:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(255, 215, 0, 0.5); /* Gold glow */
+      }
+
+      .project img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .project h3 {
+        margin: 15px 0;
+        color: #d4af37; /* Gold */
+      }
+
+      .project a {
+        text-decoration: none;
+        color: white;
+        background: #4a0000;
+        padding: 10px 15px;
+        border-radius: 5px;
+        display: inline-block;
+        margin-bottom: 15px;
+        transition: background 0.3s;
+      }
+
+      .project a:hover {
+        background: #d40000; /* Bright red */
+      }
+
+      #about {
+        background: #121212;
+        color: #e4e4e4;
+      }
+
+      #about h2 {
+        color: #d4af37; /* Gold */
+      }
+
+      #contact {
+        background: #1b1b1b;
+        color: #e4e4e4;
+      }
+
+      #contact a {
+        color: #88eb88; /* Light Green */
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      footer {
+        background: #121212;
+        color: #777;
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      /* Keyframe Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="logo.png" alt="Lizz Games Logo">
+        <h1>Lizz Games</h1>
       </div>
-    </section>
+      <nav>
+        <ul>
+          <li><a href="#intro">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#contact"> </a></li>
+          <li><a href="#contact"> </a></li>
+          <li><a href="#contact"> </a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <section id="about">
-      <h2>About Us</h2>
-      <p>Lizz Games is dedicated to delivering unparalleled gaming experiences. Our projects redefine interaction with AI NPCs and immersive VR worlds.</p>
-    </section>
+    <main>
+      <section id="intro">
+        <h2>Welcome to Lizz Games</h2>
+        <p>Explore the next level of gaming with our AI NPC technology and groundbreaking projects.</p>
+      </section>
 
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>Have a question or want to collaborate? Reach out to us!</p>
-      <p>Email: <a href="mailto:tammalibhanuprakash23@gmail.com">tammalibhanuprakash23@gmail.com</a></p>
-    </section>
-  </main>
+      <section id="projects">
+        <h2>Our Projects</h2>
+        <div class="gallery">
+          <div class="project">
+          <img src="https://github.com/Bonny8055/LizzGames/blob/main/DrealLine.png" alt="Dreamline">
+          <h3>Dreamline</h3>
+            <a href="https://bhanuprakash.itch.io/dreamline">Explore the Future</a>
+          </div>
+            
+          <div class="project2">
+            <img src="https://github.com/Bonny8055/LizzGames/blob/main/AutoAnna.png" alt="AutoAnna">
+            <h3>AR Game</h3>
+            <a href="https://bhanuprakash.itch.io/dreamline">Explore the Future</a>
+          </div>
+              
+          
+          <div class="project">
+            <img src="https://github.com/Bonny8055/LizzGames/blob/main/Dino_kurradu.png" alt="DinoKurradu 🦕">
+            <h3>DinoKurradu</h3>
+            <a href="https://bhanuprakash.itch.io/dino">View Project</a>
+          </div>
+        </div>
+      </section>
 
-  <footer>
-    <p>© 2025 Lizz Games. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+      <section id="about">
+        <h2>About Us</h2>
+        <p>Lizz Games is dedicated to delivering unparalleled gaming experiences. Our projects redefine interaction with AI NPCs and immersive VR worlds.</p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have a question or want to collaborate? Reach out to us!</p>
+        <p>Email: <a href="mailto:tammalibhanuprakash23@gmail.com">tammalibhanuprakash23@gmail.com</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 Lizz Games. All rights reserved.</p>
+    </footer>
+  </body>
+  </html>
